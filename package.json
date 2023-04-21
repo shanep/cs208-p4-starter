@@ -7,17 +7,22 @@
   "author": "Pat von Student",
   "type": "module",
   "scripts": {
-    "lint": "eslint js/**",
-    "lint:fix": "eslint js/** --fix",
-    "test": "node --test"
+    "lint": "eslint src/**/*",
+    "lint:fix": "eslint src/**/* --fix",
+    "start": "nodemon src/server.js"
   },
   "devDependencies": {
-    "eslint": "^8.37.0",
+    "eslint": "^8.38.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
     "jsdom": "^21.1.1"
   },
   "dependencies": {
     "express": "^4.18.2",
+    "nodemon": "^2.0.22",
     "pug": "^3.0.2",
     "sqlite3": "^5.1.6"
   }
