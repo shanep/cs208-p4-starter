@@ -8,7 +8,7 @@ and JavaScript.
 
 ## Project links
 
-* [Video Walkthrough]()
+* [Video Walkthrough](https://youtu.be/SbSXki2tAG8)
 * [Grading Rubric](https://shanepanter.com/cs208/grading-rubric.html)
 
 ## Task 0 - Run the website
@@ -100,11 +100,11 @@ to an object which can then be passed to your template.
 
 ```javascript
 const local = { tasks: [] }
-db.each('SELECT id, task FROM todo', function (err, row) {
+  db.each('SELECT id, task FROM todo', function (err, row) {
     if (err) {
       console.log(err)
     } else {
-      local.tasks.push({ id: row.id, name: row.task })
+      local.tasks.push({ id: row.id, task: row.task })
     }
   }, function (err, numrows) {
     if (!err) {
@@ -144,7 +144,7 @@ where you can then use that id to remove it from the database 😃.
 ```pug
     ul
     - for (let i = 0; i < tasks.length; i++)
-        li= tasks[i].id + " " + tasks[i].name
+        li= tasks[i].id + " " + tasks[i].task
             form(action="/delete", method="post")
                 input(type="hidden", name="id" value=tasks[i].id)
                 input(type="submit", value="Delete")
