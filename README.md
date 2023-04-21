@@ -85,6 +85,16 @@ When a user submits the form on the main page you will need to add a new TODO
 item into your database. You will then need to allow a user to delete a selected
 item out of the database.
 
+Here is an example on how to create a table to store all of your data in. This
+example uses the AUTOINCREMENT on the primary key to make things easier to keep
+track of.
+
+```javascript
+db.run(`CREATE TABLE todo (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    task TEXT NOT NULL)`)
+```
+
 Here is an example on how to get all the tasks from the database and add them
 to an object which can then be passed to your template.
 
@@ -123,13 +133,13 @@ stmt.finalize()
 
 Now that you have a template on the front end and a database on the backend you
 need to hook the two up. Go back to your template file and make sure that you
-can add and delete items from your list and and in any additional code to
-server.js. You will need to use a for loop in you pug templates.
+can add and delete items from your list and add in any additional code to
+server.js that is necessary to make things work.
 
-The example below is storing the id of each post in a hidden field so when the
-user clicks the delete button the form will send the id of the task back to to
-**server.js** file where you can then use that id to remove it from the database
-😃.
+You will need to use a for loop in you pug templates. The example below is
+storing the id of each post in a hidden field so when the user clicks the delete
+button the form will send the id of the task back to the **server.js** file
+where you can then use that id to remove it from the database 😃.
 
 ```pug
     ul
@@ -139,8 +149,6 @@ user clicks the delete button the form will send the id of the task back to to
                 input(type="hidden", name="id" value=tasks[i].id)
                 input(type="submit", value="Delete")
 ```
-
-
 
 ## Task 5 - Complete the Retrospective
 
