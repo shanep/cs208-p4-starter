@@ -60,6 +60,8 @@ your implementation.
 
 ![example1](public/img/example1.png)
 
+- You can reference how to make a form in Section 3.2 of the textbook
+
 ## Task 2 - Add CSS
 
 The default styling is pretty plain 🙁. So for this task you need to add some
