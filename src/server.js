@@ -13,6 +13,7 @@ app.set('view engine', 'pug')
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) {
+  //TODO You will need to load your tasks from the data base here
   console.log('GET called')
   res.render('index')
 })
