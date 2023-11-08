@@ -20,20 +20,19 @@ app.use(express.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) {
   //TODO You will need to do a SQL select here
-  console.log('GET called')
-  res.render('index')
+
 })
 
 app.post('/', function (req, res) {
   console.log('adding todo item')
   //TODO You will need to to do a SQL Insert here
-  res.redirect('/')
+
 })
 
 app.post('/delete', function (req, res) {
   console.log('deleting todo item')
   //TODO you will need to delete here
-  res.redirect('/')
+
 })
 
 // Start the web server
