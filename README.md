@@ -55,7 +55,7 @@ One easy way to get started using pug is to write your page in HTML and then
 modify the generated pug files as they will not have some of the features needed
 to display dynamically generated lists. After you are done with this step you
 should have a site that looks similar to what is shown below. You are not
-expected to match what is show below exactly you are free to be creative with
+expected to match what is shown below exactly you are free to be creative with
 your implementation.
 
 ![example1](public/img/example1.png)
@@ -138,7 +138,7 @@ need to hook the two up. Go back to your template file and make sure that you
 can add and delete items from your list and add in any additional code to
 server.js that is necessary to make things work.
 
-You will need to use a for loop in you pug templates. The example below is
+You will need to use a for loop in your pug templates. The example below is
 storing the id of each post in a hidden field so when the user clicks the delete
 button the form will send the id of the task back to the **server.js** file
 where you can then use that id to remove it from the database 😃.
