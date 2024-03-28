@@ -19,23 +19,26 @@ app.set('view engine', 'pug')
 app.use(express.urlencoded({ extended: false }))
 
 app.get('/', function (req, res) {
-  //TODO You will need to do a SQL select here
+    //TODO You will need to do a SQL select here
+    //TODO You will need to update the code below!
+    console.log('GET called')
+    res.render('index')
 
 })
 
 app.post('/', function (req, res) {
-  console.log('adding todo item')
-  //TODO You will need to to do a SQL Insert here
+    console.log('adding todo item')
+    //TODO You will need to to do a SQL Insert here
 
 })
 
 app.post('/delete', function (req, res) {
-  console.log('deleting todo item')
-  //TODO you will need to delete here
+    console.log('deleting todo item')
+    //TODO you will need to delete here
 
 })
 
 // Start the web server
 app.listen(3000, function () {
-  console.log('Listening on port 3000...')
+    console.log('Listening on port 3000...')
 })
