@@ -9,7 +9,6 @@ and JavaScript.
 ## Project links
 
 * [Video Walkthrough](https://youtu.be/SbSXki2tAG8)
-* [Grading Rubric](https://shanepanter.com/cs208/grading-rubric.html)
 
 ## Task 0 - Run the website
 
